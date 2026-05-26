@@ -4,20 +4,31 @@ export interface ClientLogo {
   logo: string;
 }
 
+/** Logo files live in /public with exact filenames provided by the client. */
+function logo(filename: string): string {
+  return `/${encodeURI(filename)}`;
+}
+
+/** Client logos in display order (matches company portfolio sheet) */
 export const CLIENT_LOGOS: ClientLogo[] = [
-  { name: "Tamanna Aviation", slug: "tamanna-aviation", logo: "/clients/tamanna-aviation.png" },
-  { name: "Dilli Darbar", slug: "dilli-darbar", logo: "/clients/dilli-darbar.png" },
-  { name: "Wingzz Up", slug: "wingzz-up", logo: "/clients/wingzz-up.png" },
-  { name: "Vedacare", slug: "vedacare", logo: "/clients/vedacare.png" },
-  { name: "A Biz Chancellor", slug: "a-biz-chancellor", logo: "/clients/a-biz-chancellor.png" },
-  { name: "Kocktail Kraft", slug: "kocktail-kraft", logo: "/clients/kocktail-kraft.png" },
-  { name: "Shark In", slug: "shark-in", logo: "/clients/shark-in.png" },
-  { name: "Digipsum", slug: "digipsum", logo: "/clients/digipsum.png" },
-  { name: "Sheaf", slug: "sheaf", logo: "/clients/sheaf.png" },
-  { name: "TVQ", slug: "tvq", logo: "/clients/tvq.png" },
-  { name: "Miraki Glaze", slug: "miraki-glaze", logo: "/clients/miraki-glaze.png" },
-  { name: "Cred Cash", slug: "cred-cash", logo: "/clients/cred-cash.png" },
-  { name: "Look's Ayurveda", slug: "looks-ayurveda", logo: "/clients/looks-ayurveda.png" },
-  { name: "EIFT", slug: "eift", logo: "/clients/eift.png" },
-  { name: "Indian Pest Control", slug: "indian-pest-control", logo: "/clients/indian-pest-control.png" },
+  { name: "Tamanna Aviation", slug: "tamanna-aviation", logo: logo("Tamanna.png") },
+  { name: "Dilli Darbar", slug: "dilli-darbar", logo: logo("dilli darbar.png") },
+  { name: "Wingzz Up", slug: "wingzz-up", logo: logo("wingzz.png") },
+  { name: "Vedacare Herbal Power", slug: "vedacare", logo: logo("vedacare.png") },
+  { name: "A Biz Chancellor", slug: "a-biz-chancellor", logo: logo("a biz chancellor.png") },
+  { name: "Shark In", slug: "shark-in", logo: logo("shark in.png") },
+  { name: "Kocktail Kraft", slug: "kocktail-kraft", logo: logo("Kocktail.png") },
+  { name: "Sheaf", slug: "sheaf", logo: logo("sheaf.png") },
+  { name: "Digi Psum", slug: "digipsum", logo: logo("digipsum.png") },
+  { name: "MCX Call Tips", slug: "mcx-call-tips", logo: logo("mcx.png") },
+  { name: "TVQ – True Value Quality", slug: "tvq", logo: logo("tvq.png") },
+  { name: "Miraki Glaze", slug: "miraki-glaze", logo: logo("mirakglaze.png") },
+  { name: "Cred Cash", slug: "cred-cash", logo: logo("cred cash.png") },
+  { name: "Look's Ayurveda", slug: "looks-ayurveda", logo: logo("Look.png") },
+  { name: "EIFT", slug: "eift", logo: logo("eift.png") },
+  {
+    name: "IPC – Indian Pest Control",
+    slug: "indian-pest-control",
+    logo: logo("indian pest control.png"),
+  },
 ];

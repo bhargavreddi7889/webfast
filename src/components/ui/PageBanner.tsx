@@ -11,7 +11,7 @@ export function PageBanner({ label, title, description }: PageBannerProps) {
         <div className="absolute -right-20 top-0 h-72 w-72 rounded-full bg-[#1a73e8]/20 blur-3xl" />
         <div className="absolute -left-20 bottom-0 h-64 w-64 rounded-full bg-[#22c55e]/15 blur-3xl" />
       </div>
-      <div className="container-max relative px-4 text-center sm:px-6 lg:px-8">
+      <div className="container-max relative text-center">
         {label && (
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#22c55e]">
             {label}

@@ -13,7 +13,7 @@ export default function TermsPage() {
   return (
     <>
       <SiteHeader />
-      <main className="container-max px-4 py-32 sm:px-6 lg:px-8">
+      <main className="container-max py-32">
         <h1 className="text-4xl font-bold text-slate-900">Terms & Conditions</h1>
         <div className="prose prose-slate mt-8 max-w-3xl space-y-4 text-slate-600">
           <p>Last updated: {new Date().toLocaleDateString("en-IN")}</p>

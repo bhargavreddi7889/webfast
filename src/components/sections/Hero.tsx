@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { BrandLogo } from "@/components/ui/BrandLogo";
 import { ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { ContactForm } from "@/components/forms/ContactForm";
-import { STATS, WHATSAPP_URL, COMPANY, GET_QUOTE_URL, SITE } from "@/lib/constants";
+import { STATS, WHATSAPP_URL, COMPANY, GET_QUOTE_URL } from "@/lib/constants";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export function Hero() {
@@ -20,7 +20,7 @@ export function Hero() {
         <div className="absolute -left-32 top-1/3 h-80 w-80 rounded-full bg-[#22c55e]/12 blur-3xl" />
       </div>
 
-      <div className="container-max relative px-4 sm:px-6 lg:px-8">
+      <div className="container-max relative">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14 [&>*]:min-w-0">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -96,14 +96,7 @@ export function Hero() {
             <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[#1a73e8] via-[#22c55e] to-[#e65100] opacity-90 blur-sm sm:rounded-3xl" />
             <div className="relative overflow-hidden rounded-2xl border border-white/80 bg-gradient-to-br from-white via-blue-50/90 to-green-50/80 p-4 shadow-2xl shadow-blue-900/10 sm:rounded-3xl sm:p-6 lg:p-8">
               <div className="relative">
-                <Image
-                  src="/logo.png"
-                  alt={`${SITE.name} logo`}
-                  width={320}
-                  height={96}
-                  className="mb-4 h-12 w-auto max-w-full object-contain object-left sm:h-14 md:h-16"
-                  priority
-                />
+                <BrandLogo variant="hero" linked={false} className="mb-4" />
                 <h2 className="text-2xl font-bold leading-snug text-slate-900 sm:text-3xl">
                   Ready To Grow Your{" "}
                   <span className="gradient-text">Digital Presence</span>

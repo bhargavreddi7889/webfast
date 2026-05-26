@@ -21,8 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...servicePages,
     { url: `${base}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/clients`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/testimonials`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/pricing`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/get-quote`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     {
       url: `${base}/privacy`,

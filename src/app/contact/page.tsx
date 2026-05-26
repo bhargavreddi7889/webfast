@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Footer } from "@/components/layout/Footer";
-import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { Contact } from "@/components/sections/Contact";
 import { SITE } from "@/lib/constants";
@@ -24,7 +23,6 @@ export default function ContactPage() {
         <Contact showHeading={false} />
       </main>
       <Footer />
-      <WhatsAppFloat />
     </>
   );
 }

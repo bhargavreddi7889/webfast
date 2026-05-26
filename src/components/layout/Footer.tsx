@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Share2 } from "lucide-react";
 import { BrandLogo } from "@/components/ui/BrandLogo";
+import { PaymentQrDisplay } from "@/components/payment/PaymentQrDisplay";
 import { COMPANY, SITE, SOCIAL, WHATSAPP_URL, GET_QUOTE_URL } from "@/lib/constants";
 
 const quickLinks = [
@@ -8,8 +9,8 @@ const quickLinks = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/#services" },
   { label: "Clients", href: "/clients" },
-  { label: "Testimonials", href: "/testimonials" },
   { label: "Contact", href: "/contact" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Get a Quote", href: GET_QUOTE_URL },
 ];
 
@@ -17,6 +18,8 @@ const serviceLinks = [
   { label: "SEO", href: "/services/seo" },
   { label: "PPC", href: "/services/ppc" },
   { label: "Web Development", href: "/services/web-development" },
+  { label: "Hosting", href: "/services/hosting" },
+  { label: "HRMS", href: "/services/hrms" },
   { label: "Social Media", href: "/services/social-media-marketing" },
   { label: "Branding", href: "/services/branding" },
 ];
@@ -31,7 +34,7 @@ const socialLabels: Record<string, string> = {
 export function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-300">
-      <div className="container-max section-padding px-4 pb-10 sm:px-6 lg:px-8">
+      <div className="container-max section-padding pb-10">
         <div className="grid gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
             <BrandLogo variant="footer" showText={false} className="brightness-0 invert" />
@@ -128,6 +131,24 @@ export function Footer() {
               <p>UDYAM: {COMPANY.udyam}</p>
               <p>ISO: {COMPANY.iso}</p>
             </div>
+          </div>
+        </div>
+
+        <div className="mt-12 rounded-2xl border border-slate-800 bg-slate-900/80 p-6 sm:p-8">
+          <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
+            <div className="text-center sm:text-left">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-white">
+                Pay via UPI
+              </h3>
+              <p className="mt-2 max-w-md text-sm text-slate-400">
+                Scan our QR code to pay for any package. After payment, use{" "}
+                <Link href="/pricing" className="font-medium text-brand-orange hover:underline">
+                  Pay Now
+                </Link>{" "}
+                on the pricing page to submit your UTR.
+              </p>
+            </div>
+            <PaymentQrDisplay size="sm" showCaption={false} />
           </div>
         </div>
 

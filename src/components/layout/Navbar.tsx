@@ -37,7 +37,7 @@ export function Navbar() {
           scrolled ? "glass shadow-md shadow-slate-900/5 py-3" : "border-b border-slate-100 bg-white py-4 sm:py-5"
         )}
       >
-        <nav className="container-max flex min-h-[60px] items-center justify-between gap-3 px-4 sm:min-h-[72px] sm:gap-4 sm:px-6 lg:min-h-[88px] lg:px-8">
+        <nav className="container-max flex min-h-[60px] items-center justify-between gap-2 sm:min-h-[76px] sm:gap-4 lg:min-h-[96px]">
           <BrandLogo variant="navbar" className="min-w-0 shrink-0 lg:flex-none" />
 
           <ul className="hidden items-center gap-1 xl:flex">
@@ -68,7 +68,7 @@ export function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 8 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute left-1/2 top-full z-50 mt-2 w-[680px] -translate-x-1/2 rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl"
+                        className="absolute left-1/2 top-full z-50 mt-2 w-[min(92vw,760px)] -translate-x-1/2 rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl"
                       >
                         <div className="grid grid-cols-3 gap-6">
                           <MegaColumn title="Web Services" items={SERVICE_MENU.web} />
@@ -103,21 +103,40 @@ export function Navbar() {
             )}
           </ul>
 
-          <div className="hidden items-center gap-2 xl:flex">
-            <Button variant="outline" size="sm" href={GET_QUOTE_URL}>
+          <div className="hidden shrink-0 items-center gap-2.5 xl:flex">
+            <Button
+              variant="outline"
+              size="sm"
+              href={GET_QUOTE_URL}
+              className="h-11 shrink-0 px-5 whitespace-nowrap"
+            >
               Get Quote
             </Button>
-            <Button variant="primary" size="sm" href={GET_QUOTE_URL}>
-              <Calendar className="h-4 w-4" />
-              Book Consultation
+            <Button
+              variant="primary"
+              size="sm"
+              href={GET_QUOTE_URL}
+              className="h-11 shrink-0 px-5 whitespace-nowrap"
+            >
+              <Calendar className="h-4 w-4 shrink-0" />
+              <span className="hidden min-[1400px]:inline">Book Consultation</span>
+              <span className="min-[1400px]:hidden">Book Now</span>
             </Button>
-            <Button variant="whatsapp" size="sm" href={WHATSAPP_URL} external>
-              <WhatsAppIcon className="h-4 w-4" />
+            <Button
+              variant="whatsapp"
+              size="sm"
+              href={WHATSAPP_URL}
+              external
+              className="h-11 w-11 shrink-0 p-0"
+              aria-label="WhatsApp"
+            >
+              <WhatsAppIcon className="h-5 w-5" />
             </Button>
           </div>
 
           <button
-            className="rounded-lg p-2 text-slate-700 hover:bg-slate-100 xl:hidden"
+            type="button"
+            className="touch-target -mr-1 rounded-lg text-slate-700 hover:bg-slate-100 xl:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
@@ -143,10 +162,15 @@ export function Navbar() {
               transition={{ type: "spring", damping: 28, stiffness: 280 }}
               className="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white shadow-2xl xl:hidden"
             >
-              <div className="flex h-full flex-col overflow-y-auto p-6 pt-6">
+              <div className="flex h-full flex-col overflow-y-auto p-6 pt-6 pb-[max(1.5rem,env(safe-area-inset-bottom))]">
                 <div className="mb-6 flex items-center justify-between">
                   <BrandLogo variant="default" showText={false} />
-                  <button onClick={() => setMobileOpen(false)} aria-label="Close">
+                  <button
+                    type="button"
+                    onClick={() => setMobileOpen(false)}
+                    aria-label="Close menu"
+                    className="touch-target -mr-2 rounded-lg text-slate-700 hover:bg-slate-100"
+                  >
                     <X className="h-6 w-6" />
                   </button>
                 </div>

@@ -7,6 +7,7 @@ import {
   siteOpenGraphImages,
   SITE_LOGO_URL,
 } from "@/lib/site-metadata";
+import { SiteChrome } from "@/components/layout/SiteChrome";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -99,6 +100,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         {children}
+        <SiteChrome />
       </body>
     </html>
   );

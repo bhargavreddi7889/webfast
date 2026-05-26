@@ -9,7 +9,10 @@ import { HOME_SERVICES } from "@/lib/services-data";
 
 export function Services() {
   return (
-    <section id="services" className="section-padding scroll-mt-28 bg-slate-50">
+    <section
+      id="services"
+      className="section-padding scroll-mt-28 bg-gradient-to-b from-slate-50 via-blue-50/30 to-green-50/20"
+    >
       <div className="container-max">
         <SectionHeading
           label="Our Services"

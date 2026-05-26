@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Footer } from "@/components/layout/Footer";
-import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { ServicePageContent } from "@/components/services/ServicePageContent";
 import {
   SERVICES,
@@ -78,7 +77,6 @@ export default async function ServicePage({ params }: PageProps) {
         <ServicePageContent slug={service.slug} />
       </main>
       <Footer />
-      <WhatsAppFloat />
     </>
   );
 }

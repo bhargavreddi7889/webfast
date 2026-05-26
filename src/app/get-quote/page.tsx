@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Footer } from "@/components/layout/Footer";
-import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { COMPANY, SITE, WHATSAPP_URL } from "@/lib/constants";
@@ -24,7 +23,7 @@ export default function GetQuotePage() {
           description="Tell us about your project — we'll prepare a tailored proposal within 24 hours."
         />
         <section className="section-padding bg-slate-50">
-          <div className="container-max px-4 sm:px-6 lg:px-8">
+          <div className="container-max">
             <div className="grid min-w-0 gap-10 lg:grid-cols-5 lg:gap-12">
               <div className="lg:col-span-2">
                 <h2 className="text-2xl font-bold text-slate-900">Why reach out?</h2>
@@ -89,7 +88,6 @@ export default function GetQuotePage() {
         </section>
       </main>
       <Footer />
-      <WhatsAppFloat />
     </>
   );
 }

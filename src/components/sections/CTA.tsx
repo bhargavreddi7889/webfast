@@ -9,7 +9,7 @@ import { WHATSAPP_URL, GET_QUOTE_URL } from "@/lib/constants";
 export function CTA() {
   return (
     <section className="section-padding">
-      <div className="container-max px-4 sm:px-6 lg:px-8">
+      <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -10,7 +10,7 @@ import { COMPANY, WHATSAPP_URL, SOCIAL } from "@/lib/constants";
 export function Contact({ showHeading = true }: { showHeading?: boolean }) {
   return (
     <section id="contact" className="section-padding bg-white">
-      <div className="container-max px-4 sm:px-6 lg:px-8">
+      <div className="container-max">
         {showHeading && (
           <SectionHeading
             label="Contact Us"

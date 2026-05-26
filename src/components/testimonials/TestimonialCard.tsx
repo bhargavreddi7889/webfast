@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { Star } from "lucide-react";
 import type { Testimonial } from "@/lib/testimonials-data";
+import { GOOGLE_REVIEWS_URL } from "@/lib/constants";
 
 function GoogleLogo({ className }: { className?: string }) {
   return (
@@ -69,12 +69,14 @@ export function TestimonialCard({
       </p>
 
       {truncate && (
-        <Link
-          href="/testimonials"
+        <a
+          href={GOOGLE_REVIEWS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-2 inline-block text-sm font-semibold text-[#1a73e8] hover:text-[#1557b0] hover:underline"
         >
           Read more
-        </Link>
+        </a>
       )}
 
       <p className="mt-5 font-bold text-slate-900">{testimonial.name}</p>

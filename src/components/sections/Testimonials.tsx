@@ -30,7 +30,7 @@ function GoogleLogo({ className }: { className?: string }) {
 export function Testimonials({ showBanner = true }: { showBanner?: boolean }) {
   return (
     <section id="testimonials" className="section-padding bg-slate-50">
-      <div className="container-max px-4 sm:px-6 lg:px-8">
+      <div className="container-max">
         {showBanner && (
           <div className="mb-10 text-center">
             <h2 className="text-3xl font-bold uppercase tracking-wide text-[#dc2626] sm:text-4xl">

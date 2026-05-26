@@ -9,7 +9,10 @@ const nextConfig: NextConfig = {
     root: projectRoot,
   },
   async redirects() {
-    return [{ source: "/portfolio", destination: "/", permanent: false }];
+    return [
+      { source: "/portfolio", destination: "/", permanent: false },
+      { source: "/testimonials", destination: "/", permanent: false },
+    ];
   },
   images: {
     remotePatterns: [

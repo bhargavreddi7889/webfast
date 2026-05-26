@@ -1,6 +1,5 @@
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Footer } from "@/components/layout/Footer";
-import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { Hero } from "@/components/sections/Hero";
 import { AboutPreview } from "@/components/sections/AboutPreview";
 import { Services } from "@/components/sections/Services";
@@ -25,7 +24,6 @@ export default function HomePage() {
         <CTA />
       </main>
       <Footer />
-      <WhatsAppFloat />
     </>
   );
 }

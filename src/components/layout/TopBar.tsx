@@ -17,17 +17,17 @@ export function TopBar() {
         </a>
         <a
           href={`mailto:${COMPANY.email}`}
-          className="shrink-0 text-slate-300 hover:text-white"
-          aria-label="Email us"
+          className="touch-target shrink-0 rounded-lg text-slate-300 hover:bg-white/10 hover:text-white"
+          aria-label={`Email ${COMPANY.email}`}
         >
-          <Mail className="h-4 w-4" />
+          <Mail className="h-5 w-5" />
         </a>
       </div>
     </div>
 
     {/* Desktop */}
     <div className="hidden border-b border-slate-800 bg-slate-950 text-sm text-white sm:block">
-      <div className="container-max flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <div className="container-max flex items-center justify-between py-3">
         <div className="flex flex-wrap items-center gap-4 lg:gap-6">
           <a
             href={PHONE_URL}
