@@ -7,10 +7,10 @@ import { InfiniteMarquee } from "@/components/ui/InfiniteMarquee";
 import { TestimonialCard } from "@/components/testimonials/TestimonialCard";
 
 export function TestimonialsPreview() {
-  const track = (
+  const cards = (
     <>
       {TESTIMONIALS.map((testimonial) => (
-        <div key={testimonial.name} className="w-[min(100%,380px)] shrink-0 sm:w-[400px]">
+        <div key={testimonial.name} className="w-[min(86vw,380px)] shrink-0 sm:w-[400px]">
           <TestimonialCard testimonial={testimonial} truncate />
         </div>
       ))}
@@ -48,11 +48,17 @@ export function TestimonialsPreview() {
         </a>
       </div>
 
-      <div className="relative">
+      <div className="space-y-4 sm:hidden">
+        {TESTIMONIALS.slice(0, 3).map((testimonial) => (
+          <TestimonialCard key={testimonial.name} testimonial={testimonial} truncate />
+        ))}
+      </div>
+
+      <div className="relative hidden sm:block">
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-white via-white/90 to-transparent sm:w-24" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-white via-white/90 to-transparent sm:w-24" />
         <InfiniteMarquee duration={70}>
-          {track}
+          {cards}
         </InfiniteMarquee>
       </div>
     </section>

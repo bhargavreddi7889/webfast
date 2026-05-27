@@ -75,6 +75,7 @@ export function Hero() {
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.35 + i * 0.08 }}
+                  className={i === 0 ? "col-span-2 sm:col-span-1" : ""}
                 >
                   <p className="text-2xl font-bold text-slate-900 sm:text-3xl">
                     <AnimatedCounter value={stat.value} suffix={stat.suffix} />

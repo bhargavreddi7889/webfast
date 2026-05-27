@@ -115,7 +115,7 @@ export function LeadPopup() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 40 }}
             transition={{ type: "spring", damping: 26, stiffness: 280 }}
-            className="fixed inset-x-0 bottom-0 z-[101] flex max-h-[min(92dvh,900px)] w-full flex-col pb-[env(safe-area-inset-bottom)] sm:inset-x-auto sm:bottom-auto sm:left-1/2 sm:top-1/2 sm:max-h-[min(90vh,900px)] sm:w-[calc(100%-2rem)] sm:max-w-4xl sm:-translate-x-1/2 sm:-translate-y-1/2"
+            className="fixed inset-x-0 bottom-0 z-[101] flex max-h-[min(94dvh,900px)] w-full flex-col pb-[env(safe-area-inset-bottom)] sm:inset-x-auto sm:bottom-auto sm:left-1/2 sm:top-1/2 sm:max-h-[min(90vh,900px)] sm:w-[calc(100%-2rem)] sm:max-w-4xl sm:-translate-x-1/2 sm:-translate-y-1/2"
           >
             <div className="relative flex max-h-[inherit] flex-col overflow-hidden rounded-t-2xl bg-white shadow-2xl shadow-slate-900/40 sm:rounded-3xl">
               <button
@@ -129,7 +129,7 @@ export function LeadPopup() {
 
               <div className="grid min-h-0 flex-1 overflow-y-auto overscroll-contain lg:grid-cols-2 lg:overflow-hidden">
                 {/* Left — offer copy */}
-                <div className="border-b border-slate-100 bg-white p-6 sm:p-8 lg:border-b-0 lg:border-r">
+                <div className="border-b border-slate-100 bg-white p-5 sm:p-8 lg:border-b-0 lg:border-r">
                   <h2
                     id="lead-popup-title"
                     className="text-2xl font-bold leading-tight text-slate-900 sm:text-3xl"
@@ -142,7 +142,7 @@ export function LeadPopup() {
                     <span className="text-[#1a73e8]">{COMPANY.name}</span> Helps You With:
                   </p>
 
-                  <ul className="mt-5 space-y-3">
+                  <ul className="mt-4 space-y-2.5">
                     {services.map((item) => (
                       <li key={item} className="flex items-center gap-3 text-sm text-slate-700 sm:text-base">
                         <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#1a73e8]">
@@ -153,7 +153,7 @@ export function LeadPopup() {
                     ))}
                   </ul>
 
-                  <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  <div className="mt-5 hidden gap-3 sm:grid sm:grid-cols-2">
                     <div className="flex items-center gap-2 rounded-xl border border-blue-100 bg-blue-50/80 px-3 py-2.5 text-xs font-semibold text-slate-800 sm:text-sm">
                       <Flame className="h-4 w-4 shrink-0 text-orange-500" />
                       Trusted by 383+ Clients
@@ -164,7 +164,7 @@ export function LeadPopup() {
                     </div>
                   </div>
 
-                  <p className="mt-6 text-sm font-bold text-[#0f2744] sm:text-base">
+                  <p className="mt-4 text-sm font-bold text-[#0f2744] sm:mt-6 sm:text-base">
                     Claim Your <span className="text-[#1a73e8]">FREE</span> Digital Marketing
                     Consultation Now!
                   </p>

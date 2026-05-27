@@ -90,9 +90,21 @@ export const SERVICE_MENU = {
 } as const;
 
 export const SOCIAL = [
-  { label: "LinkedIn", href: "https://linkedin.com", icon: "linkedin" },
-  { label: "Instagram", href: "https://instagram.com", icon: "instagram" },
-  { label: "Facebook", href: "https://facebook.com", icon: "facebook" },
+  {
+    label: "LinkedIn",
+    href: "https://in.linkedin.com/company/webfasttechnology",
+    icon: "linkedin",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/webfasttechnology/",
+    icon: "instagram",
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/webfastofficial/",
+    icon: "facebook",
+  },
   { label: "Twitter", href: "https://twitter.com", icon: "twitter" },
 ] as const;
 

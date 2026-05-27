@@ -8,7 +8,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { HostingOfferBanner } from "@/components/services/HostingOfferBanner";
-import { GET_QUOTE_URL, WHATSAPP_URL } from "@/lib/constants";
+import { GET_QUOTE_URL, HOSTING_OFFER_URL, WHATSAPP_URL } from "@/lib/constants";
 
 interface ServicePageContentProps {
   slug: ServiceSlug;
@@ -72,7 +72,8 @@ export function ServicePageContent({ slug }: ServicePageContentProps) {
                   <Button
                     variant="outline"
                     size="lg"
-                    href="/pricing"
+                    href={slug === "hosting" ? HOSTING_OFFER_URL : "/pricing"}
+                    external={slug === "hosting"}
                     className="w-full border-white/40 bg-white/10 !text-white hover:bg-white/20 sm:w-auto"
                   >
                     View Packages
